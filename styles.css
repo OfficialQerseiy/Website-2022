@@ -1,0 +1,403 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-secondary: #e00c0c;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces-Light.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Pacifico";
+  src: url("/assets/fonts/Pacifico-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("/assets/fonts/Raleway-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("/assets/fonts/Raleway-Light.ttf");
+  font-weight: 300;
+}
+
+/* On Load - Enter Gate  */
+
+#heaven-container {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 10s ease;
+  overflow: hidden;
+}
+
+#heaven-video {
+  position: absolute;
+  
+}
+
+#enter-button {
+  padding: 24px 32px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  z-index: 200;
+}
+
+#enter-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Background gif */
+
+#wrapper-drake {
+  position: absolute;
+  inset: 0;
+  background: url("assets/images/giphy.gif");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.1;
+}
+
+/* Angel  */
+#angel-contain {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.2;
+}
+
+/* Main */
+#wrapper {
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.271),
+      rgba(0, 0, 0, 0.271)
+    ),
+    url("assets/images/black.jpg");
+  background-position: center;
+  background-size: cover;
+  font-size: 18px;
+  color: white;
+  transition: all 10s ease;
+}
+
+.discord-container {
+  text-align: center;
+  color: var(--color-secondary);
+  font-family: "Poppins";
+  z-index: 10;
+}
+
+.discord-name {
+  font-size: 1.37em;
+  letter-spacing: -0.045rem;
+  font-weight: 400;
+}
+.discord-id {
+  font-size: 0.75em;
+}
+
+.divider {
+  width: 42rem;
+  margin-top: 1rem;
+  opacity: 0.2;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway";
+  z-index: 10;
+}
+
+.greeting {
+  margin: 0.5rem 0;
+
+  font-size: 1.25em;
+  text-align: center;
+  font-family: "Pacifico";
+  font-weight: 400;
+  letter-spacing: 0.15rem;
+}
+.about-text,
+.socials-text {
+  letter-spacing: -0.025rem;
+  line-height: 26.5px;
+}
+
+.about-text {
+  font-size: 0.875em;
+  font-weight: 500;
+  max-width: 36rem;
+  align-self: center;
+}
+
+.highlight {
+  text-decoration: underline;
+  color: white;
+  background-color: rgba(144, 144, 144, 0.25);
+}
+
+.highlight:hover {
+  text-decoration: none;
+}
+
+.socials-text {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+.socials-container {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.2rem 0;
+  gap: 0.2rem;
+}
+
+.socials-container > li {
+  width: fit-content;
+  padding: 0.5rem;
+
+  border-radius: 50%;
+
+  transition: 250ms ease;
+  cursor: pointer;
+}
+.socials-container > li:hover {
+  transform: translateY(-10px);
+}
+
+.social-link {
+  display: flex;
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  border: 2px solid var(--color-secondary);
+  justify-content: center;
+  align-items: center;
+}
+.social-link > svg {
+  fill: var(--color-secondary);
+  width: 65%;
+  height: 65%;
+}
+
+#divider-2 {
+  margin-top: 0;
+}
+
+.contact-buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.contact-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.5rem 2.5rem;
+  margin: 0 1.5rem;
+  border-radius: 0.6rem;
+  background-color: var(--color-secondary);
+
+  text-decoration: none;
+  letter-spacing: 0.025rem;
+  font-size: 0.7em;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  color: white;
+  transition: 350ms;
+}
+.contact-button > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: white;
+  margin-left: 10px;
+}
+
+.contact-button:hover {
+  transform: scale(1.1);
+}
+
+.copyright-text {
+  text-align: center;
+  margin-top: 2rem;
+  letter-spacing: 0.025rem;
+  font-size: 0.625em;
+  line-height: 1.75;
+  font-weight: 200;
+  font-family: "Fraunces";
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Spotify player */
+.spotify-container {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+
+  font-family: "Raleway";
+  z-index: 10;
+}
+
+.song-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.song-image {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.song-name {
+  font-size: 1.5em;
+}
+
+.author-name {
+  font-size: 1.2em;
+}
+
+.bar {
+  display: inline-block;
+  position: relative;
+  margin-right: 1px;
+  width: 1rem;
+  height: 1px;
+  overflow: hidden;
+  background: linear-gradient(
+    120deg,
+    hsl(141, 73%, 42%),
+    hsl(141, 100%, 60.8%)
+  );
+  color: transparent;
+  animation-name: pulse;
+  animation-duration: 1.3s;
+  animation-iteration-count: infinite;
+}
+
+.music-bars {
+  height: 70px;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Mobile */
+@media screen and (max-width: 700px) {
+  .divider {
+    width: 90vw;
+  }
+  .about-text {
+    padding: 0 1rem;
+  }
+  .discord-name {
+    font-size: 2em;
+  }
+  #heaven-container{
+    display:none
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .contact-buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-button {
+    margin: 0.5rem 0;
+    width: 70vw;
+  }
+  .spotify-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .discord-name {
+    font-size: 1.2em;
+  }
+}
+
+/* Animations */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(3600deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    height: 1px;
+    margin-top: 0;
+  }
+  10% {
+    height: 40px;
+    margin-top: -40px;
+  }
+  50% {
+    height: 20px;
+    margin-top: -20px;
+  }
+  60% {
+    height: 30px;
+    margin-top: -30px;
+  }
+  80% {
+    height: 60px;
+    margin-top: -60px;
+  }
+  100% {
+    height: 1px;
+    margin-top: 0;
+  }
+}
